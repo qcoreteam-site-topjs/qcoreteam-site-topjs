@@ -8,16 +8,26 @@
 .page-first h2 {
     color:white;
     font-size: 45px;
-    margin: 125px 0 39px;
+    margin: 80px 0 39px;
+}
+.page-first p{
+    text-indent:2em
 }
 .page-first .detail-button {
-    width: 160px;
+    width: 300px;
     height: 50px;
     background: #5a627b;
     color: white;
     line-height: 50px;
-    text-align: center;
+    text-align: left;
     position: relative;
+    padding-left:20px;
+    font-family: Source Code Pro,Monaco,Menlo,Consolas,monospace;
+}
+.page-first .detail-button:before{
+    content: "$";
+    opacity: .5;
+    padding-right: 10px;
 }
 .page-first a img {
     display: block;
