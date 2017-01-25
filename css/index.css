@@ -8,7 +8,7 @@
 .page-first h2 {
     color:white;
     font-size: 45px;
-    margin: 80px 0 39px;
+    margin: 70px 0 30px;
 }
 .page-first p{
     text-indent:2em
@@ -23,6 +23,7 @@
     position: relative;
     padding-left:20px;
     font-family: Source Code Pro,Monaco,Menlo,Consolas,monospace;
+    margin-top: 30px;
 }
 .page-first .detail-button:before{
     content: "$";
