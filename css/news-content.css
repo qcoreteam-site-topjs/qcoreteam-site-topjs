@@ -7,8 +7,9 @@ body{
     padding: 100px 0 100px 0;
 }
 .news-container .title {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: left;
+    padding-top: 20px;
 }
 .news-container span {
     color: #cccccc;
