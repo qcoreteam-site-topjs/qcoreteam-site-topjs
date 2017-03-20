@@ -32,7 +32,7 @@
     padding-top: 45px;
     left:-1000px;
     overflow: scroll;
-    width: 100%;
+    width: 250px;
 }
 .sidebar-left .list-container
 {
@@ -48,6 +48,9 @@
     color:#999;
     padding-left: 20px;
     line-height: 30px;
+}
+.sidebar-left .category:hover {
+    color: #53cc5f;
 }
 
 .sm-header {
@@ -76,7 +79,7 @@
 }
 .title-list h4{
     width: 90%;
-    color: #8c8c8c;
+    color: #444;
     font-size: 18px;
     line-height: 40px;
     border-bottom: 1px solid #eeeeee;
@@ -85,7 +88,7 @@
 
 .title-list a{
     width: 90%;
-    color: #aaa;
+    color: #666;
     display: block;
     text-decoration: none;
     font-size: 0.9em;
@@ -129,7 +132,7 @@
 .mobile-title-list a.current {
     color: #42c950;
 }
-@media (min-width:992px) {
+@media (min-width:768px) {
     .content {
         margin-top: 70px;
     }
@@ -166,17 +169,4 @@
 .head-list ul a {
     color: #42c950;
     font-size: 1rem;
-}
-
-.page-div {
-    margin-top: 50px;
-    line-height: 30px;
-    vertical-align:middle;
-}
-.page-div a{
-    color: #42c950;
-}
-
-.page-div .next {
-    float: right;
 }

@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="/css/highlight.css">
     <link rel="stylesheet" href="/css/docs.css">
 <link rel="stylesheet" href="/css/BootSideMenu.css">
+<link rel="stylesheet" href="/css/prettify.css">
     <link rel="icon" href="/topjsico.png" type="image/png"/>
 </head>
 <body>
 
 
 <header class="navbar navbar-fixed-top fixed-header fixed-header-active header hidden-sm-down">
- <nav class="navbar navbar-light">
+ <nav class="navbar-light">
   <div class="">
    <button class="navbar-toggler hidden-lg-up float-xs-right" type="button" data-toggle="collapse"
            data-target="#navbarResponsive"
@@ -77,13 +78,39 @@
                 </ul>
             </div>
             <div class="article">
-               <p>introduction</p>
+               <h2 id="比较函数"><a href="#比较函数" class="headerlink" title="比较函数"></a>比较函数</h2><p>比较两个函数的大小</p>
+<pre><code>var a = 1;
+var b = 2;
+console.log(compare(a,b));
+function compare(a, b)
+{
+    return a &gt; b ?  a : b;
+}
 
+$(&#39;#slideClose&#39;).click(function (e) {
+    e.stopPropagation();
+    var width = $(&#39;#slide&#39;).width();
+    var left = $(&#39;#slide&#39;).css(&#39;left&#39;);
+    if (parseInt(left) === 0) {
+        $(&#39;#slide&#39;).animate({
+            &quot;left&quot;: -(width + 2),
+            &quot;opacity&quot;: 0
+        });
+    } else {
+        $(&#39;#slide&#39;).animate({
+            &quot;left&quot;: 0,
+            &quot;opacity&quot;: 1
+        });
+    }
+});
+</code></pre>
             </div>
-            <div class="page-div">
-                <span class="pre"><a href="#">< 上一篇</a></span>
-                <span class="next"><a href="#">下一篇 ></a></span>
-            </div>
+
+            
+            <section class="comment">
+                <div class="ds-thread" data-title="introduction" data-url="http://www.topjs.org/docs/v0.0.1/tutorials/introduction.html"></div>
+            </section>
+            
         </div>
     </div>
 </div>
@@ -125,10 +152,24 @@
 </div>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/tether.min.js"></script>
-<script src="/js/highlight.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/common.js"></script>
 <script src="/js/BootSideMenu.js"></script>
 <script src="/js/maodian.js"></script>
+<script src="/js/prettify/prettify.js"></script>
+<script src="/js/prettify/lang-css.js"></script>
 <script src="/js/docs.js"></script>
-<script src="/js/common.js"></script>
+
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"topjs"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+
 </body>

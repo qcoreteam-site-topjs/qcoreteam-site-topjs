@@ -24,7 +24,7 @@ img {
 
 a,
 a:active {
-  color: #14AE65;
+  color: #42c950;
   text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ article a {
 }
 
 article a:hover, article a:active {
-  border-bottom-color: #14AE65;
+  border-bottom-color: #42c950;
 }
 
 p, ul, ol, blockquote {
@@ -83,7 +83,7 @@ h4 {
 
 h4.name {
   color: #fff;
-  background: #14AE65;
+  background: #42c950;
   box-shadow: 0 .25em .5em #d3d3d3;
   border-top: 1px solid #d3d3d3;
   border-bottom: 1px solid #d3d3d3;
@@ -132,9 +132,15 @@ tt, code, kbd, samp {
 }
 
 #main {
-  float: right;
-  min-width: 360px;
+  float: left;
   width: calc(100% - 300px);
+  margin-left: 300px;
+}
+
+@media (max-width: 767px) {
+  #main {
+    margin-left: 0;
+  }
 }
 
 header {
@@ -159,6 +165,11 @@ section {
 }
 
 .api-container nav {
+  position: fixed;
+  top:0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 50px;
   float: left;
   display: block;
   width: 300px;
@@ -199,7 +210,7 @@ section {
 
 .api-container nav a:hover,
 .api-container nav a:active {
-  color: #14AE65;
+  color: #42c950;
 }
 
 .api-container nav > ul {
@@ -207,7 +218,7 @@ section {
 }
 
 .api-container nav > ul > li > a {
-  color: #14AE65;
+  color: #42c950;
 }
 
 .api-container nav ul ul {
@@ -237,7 +248,7 @@ section {
 .api-container nav > h2 > a {
    display: block;
    margin: 10px 0 -10px;
-   color: #14AE65 !important;
+   color: #42c950 !important;
 }
 
 footer {
@@ -332,68 +343,6 @@ footer {
   margin: 0;
 }
 
-.prettyprint {
-  font-size: 14px;
-  overflow: auto;
-}
-
-.prettyprint.source {
-  width: inherit;
-  line-height: 18px;
-  display: block;
-  background-color: #0d152a;
-  color: #aeaeae;
-}
-
-.prettyprint code {
-  line-height: 18px;
-  display: block;
-  background-color: #0d152a;
-  color: #4D4E53;
-}
-
-.prettyprint > code {
-  padding: 15px;
-}
-
-.prettyprint .linenums code {
-  padding: 0 15px
-}
-
-.prettyprint .linenums li:first-of-type code {
-  padding-top: 15px
-}
-
-.prettyprint code span.line {
-  display: inline-block
-}
-
-.prettyprint.linenums {
-  padding-left: 70px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.prettyprint.linenums ol {
-   padding-left: 0
-}
-
-.prettyprint.linenums li {
-   border-left: 3px #34446B solid;
-}
-
-.prettyprint.linenums li.selected, .prettyprint.linenums li.selected * {
-   background-color: #34446B;
-}
-
-.prettyprint.linenums li * {
-   -webkit-user-select: text;
-   -moz-user-select: text;
-   -ms-user-select: text;
-   user-select: text;
-}
 
 .params, .props {
   border-spacing: 0;
@@ -453,7 +402,7 @@ footer {
 }
 
 span.param-type, .params td .param-type, .param-type dd {
-   color: #14AE65;
+   color: #42c950;
   font-family: Consolas, Monaco, 'Andale Mono', monospace
 }
 
@@ -595,12 +544,12 @@ span.param-type, .params td .param-type, .param-type dd {
   z-index: 1;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 680px) {
+@media (max-width: 767px) {
   body {
     overflow-x: hidden;
   }
 
-  nav {
+  .api-container nav {
     background: #FFF;
     width: 250px;
     height: 100%;
@@ -608,9 +557,13 @@ span.param-type, .params td .param-type, .param-type dd {
     top: 0;
     right: 0;
     bottom: 0;
-    left: -250px;
+    left: -300px;
     z-index: 3;
     padding: 0 10px;
+    -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
     transition: left 0.2s;
   }
 
@@ -624,7 +577,6 @@ span.param-type, .params td .param-type, .param-type dd {
 
   #main {
     width: 100%;
-    min-width: 360px;
   }
 
   #main h1.page-title {

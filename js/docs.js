@@ -1,13 +1,16 @@
 /**
  * Created by liushuai on 2017/1/21.
  */
+
+$('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+prettyPrint();
+
 var width = $('#slide').width();
 $('#slide').css({
     "left": -(width + 2)
 });
 
-initCategory();
-$('#slideClose').click(function (e) {
+$(document).bind('touchend', function (e) {
     e.stopPropagation();
     var width = $('#slide').width();
     var left = $('#slide').css('left');
@@ -15,12 +18,12 @@ $('#slideClose').click(function (e) {
         $('#slide').animate({
             "left": -(width + 2),
             "opacity": 0
-        });
+        }, 500);
     } else {
         $('#slide').animate({
             "left": 0,
             "opacity": 1
-        });
+        }, 500);
     }
 });
 
@@ -37,12 +40,13 @@ $('#slide').click(function (e) {
 });
 
 maoDian(10);
-
-function initCategory() {
-    var pathname = window.location.pathname;
-    var page = pathname.split('/').pop();
-    console.log('current category selected');
-}
+$(document).bind('touchend', function (e) {
+    var width = $('#slide').width();
+    $('#slide').animate({
+        "left": -(width + 2),
+        "opacity": 0
+    });
+});
 $(document).click(function () {
     var width = $('#slide').width();
     $('#slide').animate({

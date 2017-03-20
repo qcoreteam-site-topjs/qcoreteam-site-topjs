@@ -33,3 +33,15 @@ function showScrollTop() {
     }
     $('#toTop').show();
 }
+
+$('header button').click(function (e) {
+    e.stopPropagation();
+    $('#navbarResponsive').collapse('toggle');
+});
+$('header').click(function (e) {
+    e.stopPropagation();
+})
+
+$(document).bind('click touchend', function (e) {
+    $('.collapse').collapse('hide');
+});

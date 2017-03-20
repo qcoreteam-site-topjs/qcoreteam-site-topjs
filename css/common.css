@@ -1,7 +1,6 @@
 /*base*/
-body
-{
-    color: #7c7c7c;
+body {
+    font:14px/1.5 "Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti;
 }
 .main-color {
     color: #41485e;
@@ -55,7 +54,7 @@ body
     src: url("../font/glyphicons-regular.woff2");
 }
 
-.glyphicon {
+.glyphicon:before {
     position: relative;
     top: 1px;
     display: inline-block;
@@ -63,12 +62,16 @@ body
     -webkit-font-smoothing: antialiased;
     font-style: normal;
     font-weight: normal;
-    line-height: 1;
     -moz-osx-font-smoothing: grayscale;
 }
 
 a {
     text-decoration: none;
+    transition-duration: 0.2s;
+}
+a:visited,a:focus,a:focus{
+    text-decoration: none;
+    outline: none;
 }
 
 a:hover {
@@ -100,14 +103,28 @@ a:hover {
         max-width: 100%;
     }
 }
+.glyphicon-chevron-right:before {
+    content: "\E224";
+    font-size: 1rem;
+}
 
+.glyphicon-chevron-left:before {
+    content: "\E225";
+}
+
+.glyphicon-chevron-down:before {
+    content: "\E602";
+}
 /*header*/
 .header .logo {
     height: 38px;
 }
 
 .header .navbar-nav a.nav-link {
-    color: #999;
+    color: #444;
+}
+.header .navbar-nav a.nav-link:hover {
+    color: #42c950;
 }
 
 .header {
@@ -118,10 +135,6 @@ a:hover {
     -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
-}
-
-a {
-    transition-duration: 0.2s;
 }
 
 @media (min-width: 768px) {
@@ -201,6 +214,7 @@ a {
     text-align: center;
     font-size: 30px;
     color: #42c950;
+    z-index: 9999;
 }
 
 #toTop:hover {
@@ -209,4 +223,39 @@ a {
 
 #toTop i:before {
     content: '\E601';
+}
+
+.page-div {
+    overflow: hidden;
+    margin-top: 20px;
+    line-height: 30px;
+    vertical-align:middle;
+}
+.page-div span {
+    display: block;
+}
+.page-div a{
+    color: #444;
+}
+.page-div a:hover{
+    color: #42c950;
+}
+/*评论*/
+section.comment {
+    background: white;
+}
+
+section.comment .ds-thread {
+    width: 90%;
+    margin: auto;
+}
+
+#ds-thread #ds-reset .ds-meta {
+    border-bottom: none !important;
+}
+#ds-thread #ds-reset .ds-comments {
+    border-bottom: none !important;
+}
+#ds-thread #ds-reset li.ds-post {
+    border-top: none !important;
 }

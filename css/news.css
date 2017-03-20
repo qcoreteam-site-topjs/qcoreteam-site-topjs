@@ -53,16 +53,10 @@ body{
 
 .news-content{
     float: left;
-    color: #7c7c7c;
+    color: #666;
 }
 .news-content p {
-    overflow: hidden;
-    height: 4.5rem;
     margin-bottom: 10px;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
 }
 
 .news-content span {
@@ -70,7 +64,7 @@ body{
 }
 
 .news-content .title {
-    color: #8c8c8c;
+    color: #444;
     text-decoration: none;
 }
 .news-content h5

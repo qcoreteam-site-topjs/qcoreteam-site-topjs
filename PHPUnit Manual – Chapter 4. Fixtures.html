@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TopJs - A full-stack web framework for nodejs</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/jsdoc.css">
+<link rel="stylesheet" href="/css/extra.css">
+    <link rel="icon" href="/topjsico.png" type="image/png"/>
+</head>
+<body>
+
+
+<header class="navbar navbar-fixed-top fixed-header fixed-header-active header ">
+ <nav class="navbar-light">
+  <div class="">
+   <button class="navbar-toggler hidden-lg-up float-xs-right" type="button" data-toggle="collapse"
+           data-target="#navbarResponsive"
+           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+   <a href="/"><img class="navbar-brand logo" src="/images/logo-green.png"></a>
+
+   <div class="collapse navbar-toggleable-md float-lg-right" id="navbarResponsive">
+    <ul class="nav navbar-nav float-lg-right">
+     <li class="nav-item"><a class="nav-link" href="/" >首页</a></li><li class="nav-item"><a class="nav-link" href="/docs/v0.0.1/" >手册</a></li><li class="nav-item"><a class="nav-link" href="/api/" >API文档</a></li><li class="nav-item"><a class="nav-link" href="/categories/blog/" >博客</a></li><li class="nav-item"><a class="nav-link" href="/categories/devel/" >开发日志</a></li><li class="nav-item"><a class="nav-link" href="/about/" >关于我们</a></li>
+    </ul>
+   </div>
+  </div>
+ </nav>
+</header>
+<div class="news-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 content">
+                <div class="title">
+                    <h4></h4>
+                    <span><time datetime="2017-02-3 7:59:40">2017-02-3 7:59:40</time></span>
+                </div>
+                <hr/>
+                <div class="detail">
+                    <!DOCTYPE html>
+<!-- saved from url=(0072)https://phpunit.de/manual/current/en/fixtures.html#fixtures.global-state -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>PHPUnit Manual – Chapter&nbsp;4.&nbsp;Fixtures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://phpunit.de/manual/current/en/fixtures.html">
+  <link href="./PHPUnit Manual – Chapter 4. Fixtures_files/bootstrap.min.css" rel="stylesheet">
+  <link href="./PHPUnit Manual – Chapter 4. Fixtures_files/highlight.css" rel="stylesheet">
+  <link href="./PHPUnit Manual – Chapter 4. Fixtures_files/style.css" rel="stylesheet">
+  <link href="./PHPUnit Manual – Chapter 4. Fixtures_files/css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
+ </head>
+ <body cz-shortcut-listen="true">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left"><li><a href="https://phpunit.de/" target="_blank" rel="external">PHPUnit</a></li><li><a href="https://phpunit.de/manual/6.0/en/index.html" target="_blank" rel="external">6.0 (beta)</a></li><li class="active"><a href="https://phpunit.de/manual/5.7/en/index.html" target="_blank" rel="external">5.7 (<strong>stable</strong>)</a></li><li><a href="https://phpunit.de/manual/4.8/en/index.html" target="_blank" rel="external">4.8 (old)</a></li></ul>
+      <ul class="nav navbar-nav navbar-right"><li class="active"><a href="https://phpunit.de/manual/current/en/index.html" target="_blank" rel="external">English</a></li><li><a href="https://phpunit.de/manual/current/ja/index.html" target="_blank" rel="external">Japanese</a></li><li><a href="https://phpunit.de/manual/current/pt_br/index.html" target="_blank" rel="external">Brazilian Portuguese</a></li><li><a href="https://phpunit.de/manual/current/zh_cn/index.html" target="_blank" rel="external">Simplified Chinese</a></li></ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-4 col-lg-3">
+     <div class="well well-sm sidebar-nav">
+<dl class="toc nav hidden-print"><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/installation.html" target="_blank" rel="external">1. Installing PHPUnit</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/installation.html#installation.requirements" target="_blank" rel="external">Requirements</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/installation.html#installation.phar" target="_blank" rel="external">PHP Archive (PHAR)</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/installation.html#installation.phar.windows" target="_blank" rel="external">Windows</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/installation.html#installation.phar.verification" target="_blank" rel="external">Verifying PHPUnit PHAR Releases</a></span></dt></dl></dd><dt><span class="section"><a href="https://phpunit.de/manual/current/en/installation.html#installation.composer" target="_blank" rel="external">Composer</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/installation.html#installation.optional-packages" target="_blank" rel="external">Optional packages</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html" target="_blank" rel="external">2. Writing Tests for PHPUnit</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.test-dependencies" target="_blank" rel="external">Test Dependencies</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers" target="_blank" rel="external">Data Providers</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.exceptions" target="_blank" rel="external">Testing Exceptions</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.errors" target="_blank" rel="external">Testing PHP Errors</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.output" target="_blank" rel="external">Testing Output</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.error-output" target="_blank" rel="external">Error output</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.error-output.edge-cases" target="_blank" rel="external">Edge cases</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/textui.html" target="_blank" rel="external">3. The Command-Line Test Runner</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/textui.html#textui.clioptions" target="_blank" rel="external">Command-Line Options</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/fixtures.html" class="active" target="_blank" rel="external">4. Fixtures</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/fixtures.html#fixtures.more-setup-than-teardown" target="_blank" rel="external">More setUp() than tearDown()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/fixtures.html#fixtures.variations" target="_blank" rel="external">Variations</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/fixtures.html#fixtures.sharing-fixture" target="_blank" rel="external">Sharing Fixture</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/fixtures.html#fixtures.global-state" target="_blank" rel="external">Global State</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/organizing-tests.html" target="_blank" rel="external">5. Organizing Tests</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/organizing-tests.html#organizing-tests.filesystem" target="_blank" rel="external">Composing a Test Suite Using the Filesystem</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/organizing-tests.html#organizing-tests.xml-configuration" target="_blank" rel="external">Composing a Test Suite Using XML Configuration</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/risky-tests.html" target="_blank" rel="external">6. Risky Tests</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.useless-tests" target="_blank" rel="external">Useless Tests</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.unintentionally-covered-code" target="_blank" rel="external">Unintentionally Covered Code</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.output-during-test-execution" target="_blank" rel="external">Output During Test Execution</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.test-execution-timeout" target="_blank" rel="external">Test Execution Timeout</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/risky-tests.html#risky-tests.global-state-manipulation" target="_blank" rel="external">Global State Manipulation</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/incomplete-and-skipped-tests.html" target="_blank" rel="external">7. Incomplete and Skipped Tests</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/incomplete-and-skipped-tests.html#incomplete-and-skipped-tests.incomplete-tests" target="_blank" rel="external">Incomplete Tests</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/incomplete-and-skipped-tests.html#incomplete-and-skipped-tests.skipping-tests" target="_blank" rel="external">Skipping Tests</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/incomplete-and-skipped-tests.html#incomplete-and-skipped-tests.skipping-tests-using-requires" target="_blank" rel="external">Skipping Tests using @requires</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/database.html" target="_blank" rel="external">8. Database Testing</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.supported-vendors-for-database-testing" target="_blank" rel="external">Supported Vendors for Database Testing</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.difficulties-in-database-testing" target="_blank" rel="external">Difficulties in Database Testing</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.the-four-stages-of-a-database-test" target="_blank" rel="external">The four stages of a database test</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.clean-up-database" target="_blank" rel="external">1. Clean-Up Database</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.set-up-fixture" target="_blank" rel="external">2. Set up fixture</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.run-test-verify-outcome-and-teardown" target="_blank" rel="external">3–5. Run Test, Verify outcome and Teardown</a></span></dt></dl></dd><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.configuration-of-a-phpunit-database-testcase" target="_blank" rel="external">Configuration of a PHPUnit Database TestCase</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.implementing-getconnection" target="_blank" rel="external">Implementing getConnection()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.implementing-getdataset" target="_blank" rel="external">Implementing getDataSet()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.what-about-the-database-schema-ddl" target="_blank" rel="external">What about the Database Schema (DDL)?</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.tip-use-your-own-abstract-database-testcase" target="_blank" rel="external">Tip: Use your own Abstract Database TestCase</a></span></dt></dl></dd><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.understanding-datasets-and-datatables" target="_blank" rel="external">Understanding DataSets and DataTables</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.available-implementations" target="_blank" rel="external">Available Implementations</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.beware-of-foreign-keys" target="_blank" rel="external">Beware of Foreign Keys</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.implementing-your-own-datasetsdatatables" target="_blank" rel="external">Implementing your own DataSets/DataTables</a></span></dt></dl></dd><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.the-connection-api" target="_blank" rel="external">The Connection API</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.database-assertions-api" target="_blank" rel="external">Database Assertions API</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.asserting-the-row-count-of-a-table" target="_blank" rel="external">Asserting the Row-Count of a Table</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.asserting-the-state-of-a-table" target="_blank" rel="external">Asserting the State of a Table</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.asserting-the-result-of-a-query" target="_blank" rel="external">Asserting the Result of a Query</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.asserting-the-state-of-multiple-tables" target="_blank" rel="external">Asserting the State of Multiple Tables</a></span></dt></dl></dd><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.frequently-asked-questions" target="_blank" rel="external">Frequently Asked Questions</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.will-phpunit-re-create-the-database-schema-for-each-test" target="_blank" rel="external">Will PHPUnit (re-)create the database schema for each
+             test?</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.am-i-required-to-use-pdo-in-my-application-for-the-database-extension-to-work" target="_blank" rel="external">Am I required to use PDO in my application for the Database
+             Extension to work?</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.what-can-i-do-when-i-get-a-too-much-connections-error" target="_blank" rel="external">What can I do, when I get a
+             <span class="quote">“<span class="quote">Too much Connections</span>”</span> Error?</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/database.html#database.how-to-handle-null-with-flat-xml-csv-datasets" target="_blank" rel="external">How to handle NULL with Flat XML / CSV Datasets?</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/test-doubles.html" target="_blank" rel="external">9. Test Doubles</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/test-doubles.html#test-doubles.stubs" target="_blank" rel="external">Stubs</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/test-doubles.html#test-doubles.mock-objects" target="_blank" rel="external">Mock Objects</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/test-doubles.html#test-doubles.prophecy" target="_blank" rel="external">Prophecy</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/test-doubles.html#test-doubles.mocking-traits-and-abstract-classes" target="_blank" rel="external">Mocking Traits and Abstract Classes</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/test-doubles.html#test-doubles.stubbing-and-mocking-web-services" target="_blank" rel="external">Stubbing and Mocking Web Services</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/test-doubles.html#test-doubles.mocking-the-filesystem" target="_blank" rel="external">Mocking the Filesystem</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/testing-practices.html" target="_blank" rel="external">10. Testing Practices</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/testing-practices.html#testing-practices.during-development" target="_blank" rel="external">During Development</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/testing-practices.html#testing-practices.during-debugging" target="_blank" rel="external">During Debugging</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/code-coverage-analysis.html" target="_blank" rel="external">11. Code Coverage Analysis</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/code-coverage-analysis.html#code-coverage-analysis.metrics" target="_blank" rel="external">Software Metrics for Code Coverage</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/code-coverage-analysis.html#code-coverage-analysis.whitelisting-files" target="_blank" rel="external">Whitelisting Files</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/code-coverage-analysis.html#code-coverage-analysis.ignoring-code-blocks" target="_blank" rel="external">Ignoring Code Blocks</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/code-coverage-analysis.html#code-coverage-analysis.specifying-covered-methods" target="_blank" rel="external">Specifying Covered Methods</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/code-coverage-analysis.html#code-coverage-analysis.edge-cases" target="_blank" rel="external">Edge Cases</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/other-uses-for-tests.html" target="_blank" rel="external">12. Other Uses for Tests</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/other-uses-for-tests.html#other-uses-for-tests.agile-documentation" target="_blank" rel="external">Agile Documentation</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/other-uses-for-tests.html#other-uses-for-tests.cross-team-tests" target="_blank" rel="external">Cross-Team Tests</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/logging.html" target="_blank" rel="external">13. Logging</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/logging.html#logging.xml" target="_blank" rel="external">Test Results (XML)</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/logging.html#logging.tap" target="_blank" rel="external">Test Results (TAP)</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/logging.html#logging.json" target="_blank" rel="external">Test Results (JSON)</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/logging.html#logging.codecoverage.xml" target="_blank" rel="external">Code Coverage (XML)</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/logging.html#logging.codecoverage.text" target="_blank" rel="external">Code Coverage (TEXT)</a></span></dt></dl></dd><dt><span class="chapter"><a href="https://phpunit.de/manual/current/en/extending-phpunit.html" target="_blank" rel="external">14. Extending PHPUnit</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.PHPUnit_Framework_TestCase" target="_blank" rel="external">Subclass PHPUnit\Framework\TestCase</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.custom-assertions" target="_blank" rel="external">Write custom assertions</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.PHPUnit_Framework_TestListener" target="_blank" rel="external">Implement PHPUnit_Framework_TestListener</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.PHPUnit_Extensions_TestDecorator" target="_blank" rel="external">Subclass PHPUnit_Extensions_TestDecorator</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.PHPUnit_Framework_Test" target="_blank" rel="external">Implement PHPUnit_Framework_Test</a></span></dt></dl></dd><dt><span class="appendix"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html" target="_blank" rel="external">A. Assertions</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertArrayHasKey" target="_blank" rel="external">assertArrayHasKey()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertClassHasAttribute" target="_blank" rel="external">assertClassHasAttribute()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertArraySubset" target="_blank" rel="external">assertArraySubset()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertClassHasStaticAttribute" target="_blank" rel="external">assertClassHasStaticAttribute()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertContains" target="_blank" rel="external">assertContains()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertContainsOnly" target="_blank" rel="external">assertContainsOnly()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertContainsOnlyInstancesOf" target="_blank" rel="external">assertContainsOnlyInstancesOf()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertCount" target="_blank" rel="external">assertCount()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertDirectoryExists" target="_blank" rel="external">assertDirectoryExists()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertDirectoryIsReadable" target="_blank" rel="external">assertDirectoryIsReadable()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertDirectoryIsWritable" target="_blank" rel="external">assertDirectoryIsWritable()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertEmpty" target="_blank" rel="external">assertEmpty()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertEqualXMLStructure" target="_blank" rel="external">assertEqualXMLStructure()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertEquals" target="_blank" rel="external">assertEquals()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertFalse" target="_blank" rel="external">assertFalse()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertFileEquals" target="_blank" rel="external">assertFileEquals()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertFileExists" target="_blank" rel="external">assertFileExists()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertFileIsReadable" target="_blank" rel="external">assertFileIsReadable()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertFileIsWritable" target="_blank" rel="external">assertFileIsWritable()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertGreaterThan" target="_blank" rel="external">assertGreaterThan()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertGreaterThanOrEqual" target="_blank" rel="external">assertGreaterThanOrEqual()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertInfinite" target="_blank" rel="external">assertInfinite()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertInstanceOf" target="_blank" rel="external">assertInstanceOf()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertInternalType" target="_blank" rel="external">assertInternalType()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertIsReadable" target="_blank" rel="external">assertIsReadable()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertIsWritable" target="_blank" rel="external">assertIsWritable()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertJsonFileEqualsJsonFile" target="_blank" rel="external">assertJsonFileEqualsJsonFile()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertJsonStringEqualsJsonFile" target="_blank" rel="external">assertJsonStringEqualsJsonFile()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertJsonStringEqualsJsonString" target="_blank" rel="external">assertJsonStringEqualsJsonString()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertLessThan" target="_blank" rel="external">assertLessThan()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertLessThanOrEqual" target="_blank" rel="external">assertLessThanOrEqual()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertNan" target="_blank" rel="external">assertNan()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertNull" target="_blank" rel="external">assertNull()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertObjectHasAttribute" target="_blank" rel="external">assertObjectHasAttribute()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertRegExp" target="_blank" rel="external">assertRegExp()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertStringMatchesFormat" target="_blank" rel="external">assertStringMatchesFormat()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertStringMatchesFormatFile" target="_blank" rel="external">assertStringMatchesFormatFile()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertSame" target="_blank" rel="external">assertSame()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertStringEndsWith" target="_blank" rel="external">assertStringEndsWith()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertStringEqualsFile" target="_blank" rel="external">assertStringEqualsFile()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertStringStartsWith" target="_blank" rel="external">assertStringStartsWith()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertThat" target="_blank" rel="external">assertThat()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertTrue" target="_blank" rel="external">assertTrue()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertXmlFileEqualsXmlFile" target="_blank" rel="external">assertXmlFileEqualsXmlFile()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertXmlStringEqualsXmlFile" target="_blank" rel="external">assertXmlStringEqualsXmlFile()</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertXmlStringEqualsXmlString" target="_blank" rel="external">assertXmlStringEqualsXmlString()</a></span></dt></dl></dd><dt><span class="appendix"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html" target="_blank" rel="external">B. Annotations</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.author" target="_blank" rel="external">@author</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.after" target="_blank" rel="external">@after</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.afterClass" target="_blank" rel="external">@afterClass</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.backupGlobals" target="_blank" rel="external">@backupGlobals</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.backupStaticAttributes" target="_blank" rel="external">@backupStaticAttributes</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.before" target="_blank" rel="external">@before</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.beforeClass" target="_blank" rel="external">@beforeClass</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.codeCoverageIgnore" target="_blank" rel="external">@codeCoverageIgnore*</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.covers" target="_blank" rel="external">@covers</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.coversDefaultClass" target="_blank" rel="external">@coversDefaultClass</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.coversNothing" target="_blank" rel="external">@coversNothing</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.dataProvider" target="_blank" rel="external">@dataProvider</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.depends" target="_blank" rel="external">@depends</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.expectedException" target="_blank" rel="external">@expectedException</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.expectedExceptionCode" target="_blank" rel="external">@expectedExceptionCode</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.expectedExceptionMessage" target="_blank" rel="external">@expectedExceptionMessage</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.expectedExceptionMessageRegExp" target="_blank" rel="external">@expectedExceptionMessageRegExp</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.group" target="_blank" rel="external">@group</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.large" target="_blank" rel="external">@large</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.medium" target="_blank" rel="external">@medium</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.preserveGlobalState" target="_blank" rel="external">@preserveGlobalState</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.requires" target="_blank" rel="external">@requires</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.runTestsInSeparateProcesses" target="_blank" rel="external">@runTestsInSeparateProcesses</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.runInSeparateProcess" target="_blank" rel="external">@runInSeparateProcess</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.small" target="_blank" rel="external">@small</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.test" target="_blank" rel="external">@test</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.testdox" target="_blank" rel="external">@testdox</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.ticket" target="_blank" rel="external">@ticket</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.uses" target="_blank" rel="external">@uses</a></span></dt></dl></dd><dt><span class="appendix"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html" target="_blank" rel="external">C. The XML Configuration File</a></span></dt><dd><dl><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.phpunit" target="_blank" rel="external">PHPUnit</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.testsuites" target="_blank" rel="external">Test Suites</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.groups" target="_blank" rel="external">Groups</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.whitelisting-files" target="_blank" rel="external">Whitelisting Files for Code Coverage</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.logging" target="_blank" rel="external">Logging</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.test-listeners" target="_blank" rel="external">Test Listeners</a></span></dt><dt><span class="section"><a href="https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.php-ini-constants-variables" target="_blank" rel="external">Setting PHP INI settings, Constants and Global Variables</a></span></dt></dl></dd><dt><span class="appendix"><a href="https://phpunit.de/manual/current/en/appendixes.index.html" target="_blank" rel="external">D. Index</a></span></dt><dd><dl><dt><span class="index"><a href="https://phpunit.de/manual/current/en/appendixes.index.html#appendixes.index.index" target="_blank" rel="external"></a></span></dt></dl></dd><dt><span class="appendix"><a href="https://phpunit.de/manual/current/en/appendixes.bibliography.html" target="_blank" rel="external">E. Bibliography</a></span></dt><dt><span class="appendix"><a href="https://phpunit.de/manual/current/en/appendixes.copyright.html" target="_blank" rel="external">F. Copyright</a></span></dt></dl>
+     </div>
+    </div>
+    <div class="col-md-8 col-lg-9">
+     <div class="row">
+      <div class="col-md-1 pull-left prev-nav"><a accesskey="p" href="https://phpunit.de/manual/current/en/textui.html" target="_blank" rel="external">Prev</a></div>
+      <div class="col-md-1 pull-right next-nav"><a accesskey="n" href="https://phpunit.de/manual/current/en/organizing-tests.html" target="_blank" rel="external">Next</a></div>
+     </div>
+<div class="chapter"><div class="titlepage"><div><div><h1 class="title" id="chapternbsp4nbspfixtures"><a id="fixtures"></a>Chapter&nbsp;4.&nbsp;Fixtures</h1></div></div></div><p>
+    <a id="idp313264" class="indexterm"></a>
+
+    One of the most time-consuming parts of writing tests is writing the
+    code to set the world up in a known state and then return it to its
+    original state when the test is complete. This known state is called
+    the <span class="emphasis"><em>fixture</em></span> of the test.
+  </p><p>
+    In <a class="xref" href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.examples.StackTest.php" title="Example 2.1: Testing array operations with PHPUnit" target="_blank" rel="external">Example 2.1</a>, the
+    fixture was simply the array that is stored in the <code class="literal">$stack</code>
+    variable. Most of the time, though, the fixture will be more complex
+    than a simple array, and the amount of code needed to set it up will
+    grow accordingly. The actual content of the test gets lost in the noise
+    of setting up the fixture. This problem gets even worse when you write
+    several tests with similar fixtures. Without some help from the testing
+    framework, we would have to duplicate the code that sets up the fixture
+    for each test we write.
+  </p><p>
+    <a id="idp215632" class="indexterm"></a>
+    <a id="idp216208" class="indexterm"></a>
+    <a id="idp216784" class="indexterm"></a>
+
+    PHPUnit supports sharing the setup code. Before a test method is run, a
+    template method called <code class="literal">setUp()</code> is invoked.
+    <code class="literal">setUp()</code> is where you create the objects against which
+    you will test. Once the test method has finished running, whether it
+    succeeded or failed, another template method called
+    <code class="literal">tearDown()</code> is invoked. <code class="literal">tearDown()</code>
+    is where you clean up the objects against which you tested.
+  </p><p>
+    In <a class="xref" href="https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.examples.StackTest2.php" title="Example 2.2: Using the @depends annotation to express dependencies" target="_blank" rel="external">Example 2.2</a> we
+    used the producer-consumer relationship between tests to share a fixture. This
+    is not always desired or even possible. <a class="xref" href="https://phpunit.de/manual/current/en/fixtures.html#fixtures.examples.StackTest.php" title="Example 4.1: Using setUp() to create the stack fixture" target="_blank" rel="external">Example 4.1</a>
+    shows how we can write the tests of the <code class="literal">StackTest</code> in such
+    a way that not the fixture itself is reused but the code that creates it.
+    First we declare the instance variable, <code class="literal">$stack</code>, that we
+    are going to use instead of a method-local variable. Then we put the
+    creation of the <code class="literal">array</code> fixture into the
+    <code class="literal">setUp()</code> method. Finally, we remove the redundant code
+    from the test methods and use the newly introduced instance variable,
+    <code class="literal">$this-&gt;stack</code>, instead of the method-local variable
+    <code class="literal">$stack</code> with the <code class="literal">assertEquals()</code>
+    assertion method.
+  </p><div class="example"><a id="fixtures.examples.StackTest.php"></a><p class="title"><strong>Example 4.1: Using setUp() to create the stack fixture</strong></p><div class="example-contents"><pre class="programlisting hljs php"><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">PHPUnit</span>\<span class="hljs-title">Framework</span>\<span class="hljs-title">TestCase</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StackTest</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">TestCase</span>
+</span>{
+    <span class="hljs-keyword">protected</span> $stack;
+
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setUp</span><span class="hljs-params">()</span>
+    </span>{
+        $this-&gt;stack = [];
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testEmpty</span><span class="hljs-params">()</span>
+    </span>{
+        $this-&gt;assertTrue(<span class="hljs-keyword">empty</span>($this-&gt;stack));
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testPush</span><span class="hljs-params">()</span>
+    </span>{
+        array_push($this-&gt;stack, <span class="hljs-string">'foo'</span>);
+        $this-&gt;assertEquals(<span class="hljs-string">'foo'</span>, $this-&gt;stack[count($this-&gt;stack)<span class="hljs-number">-1</span>]);
+        $this-&gt;assertFalse(<span class="hljs-keyword">empty</span>($this-&gt;stack));
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testPop</span><span class="hljs-params">()</span>
+    </span>{
+        array_push($this-&gt;stack, <span class="hljs-string">'foo'</span>);
+        $this-&gt;assertEquals(<span class="hljs-string">'foo'</span>, array_pop($this-&gt;stack));
+        $this-&gt;assertTrue(<span class="hljs-keyword">empty</span>($this-&gt;stack));
+    }
+}
+<span class="hljs-meta">?&gt;</span></pre></div></div><br class="example-break"><br><p>
+    <a id="idp189200" class="indexterm"></a>
+    <a id="idp189776" class="indexterm"></a>
+    <a id="idp190352" class="indexterm"></a>
+    <a id="idp190928" class="indexterm"></a>
+    <a id="idp191504" class="indexterm"></a>
+
+    The <code class="literal">setUp()</code> and <code class="literal">tearDown()</code> template
+    methods are run once for each test method (and on fresh instances) of the
+    test case class.
+  </p><p>
+    <a id="idp226176" class="indexterm"></a>
+    <a id="idp226752" class="indexterm"></a>
+    <a id="idp227328" class="indexterm"></a>
+    <a id="idp227904" class="indexterm"></a>
+    <a id="idp228480" class="indexterm"></a>
+    <a id="idp229056" class="indexterm"></a>
+    <a id="idp229632" class="indexterm"></a>
+    <a id="idp230208" class="indexterm"></a>
+
+    In addition, the <code class="literal">setUpBeforeClass()</code> and
+    <code class="literal">tearDownAfterClass()</code> template methods are called before
+    the first test of the test case class is run and after the last test of the
+    test case class is run, respectively.
+  </p><p>
+    <a id="idp232272" class="indexterm"></a>
+
+    The example below shows all template methods that are available in a test
+    case class.
+  </p><div class="example"><a id="fixtures.examples.TemplateMethodsTest.php"></a><p class="title"><strong>Example 4.2: Example showing all template methods available</strong></p><div class="example-contents"><pre class="programlisting hljs php"><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">PHPUnit</span>\<span class="hljs-title">Framework</span>\<span class="hljs-title">TestCase</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TemplateMethodsTest</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">TestCase</span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setUpBeforeClass</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+    }
+
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setUp</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+    }
+
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">assertPreConditions</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testOne</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+        $this-&gt;assertTrue(<span class="hljs-keyword">true</span>);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testTwo</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+        $this-&gt;assertTrue(<span class="hljs-keyword">false</span>);
+    }
+
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">assertPostConditions</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+    }
+
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tearDown</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tearDownAfterClass</span><span class="hljs-params">()</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+    }
+
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNotSuccessfulTest</span><span class="hljs-params">(Exception $e)</span>
+    </span>{
+        fwrite(STDOUT, <span class="hljs-keyword">__METHOD__</span> . <span class="hljs-string">"\n"</span>);
+        <span class="hljs-keyword">throw</span> $e;
+    }
+}
+<span class="hljs-meta">?&gt;</span></pre><pre class="screen"><strong class="userinput"><code>phpunit TemplateMethodsTest</code></strong>
+PHPUnit 5.7.0 by Sebastian Bergmann and contributors.
+
+TemplateMethodsTest::setUpBeforeClass
+TemplateMethodsTest::setUp
+TemplateMethodsTest::assertPreConditions
+TemplateMethodsTest::testOne
+TemplateMethodsTest::assertPostConditions
+TemplateMethodsTest::tearDown
+.TemplateMethodsTest::setUp
+TemplateMethodsTest::assertPreConditions
+TemplateMethodsTest::testTwo
+TemplateMethodsTest::tearDown
+TemplateMethodsTest::onNotSuccessfulTest
+FTemplateMethodsTest::tearDownAfterClass
+
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) TemplateMethodsTest::testTwo
+Failed asserting that &lt;boolean:false&gt; is true.
+/home/sb/TemplateMethodsTest.php:30
+
+FAILURES!
+Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"><br><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="more-setup-than-teardown"><a id="fixtures.more-setup-than-teardown"></a>More setUp() than tearDown()</h2></div></div></div><p>
+      <code class="literal">setUp()</code> and <code class="literal">tearDown()</code> are nicely
+      symmetrical in theory but not in practice. In practice, you only need
+      to implement <code class="literal">tearDown()</code> if you have allocated
+      external resources like files or sockets in <code class="literal">setUp()</code>.
+      If your <code class="literal">setUp()</code> just creates plain PHP objects, you
+      can generally ignore <code class="literal">tearDown()</code>. However, if you
+      create many objects in your <code class="literal">setUp()</code>, you might want
+      to <code class="literal">unset()</code> the variables pointing to those objects
+      in your <code class="literal">tearDown()</code> so they can be garbage collected.
+      The garbage collection of test case objects is not predictable.
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="variations"><a id="fixtures.variations"></a>Variations</h2></div></div></div><p>
+      What happens when you have two tests with slightly different setups?
+      There are two possibilities:
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          If the <code class="literal">setUp()</code> code differs only slightly, move
+          the code that differs from the <code class="literal">setUp()</code> code to
+          the test method.
+        </p></li><li class="listitem"><p>
+          If you really have a different <code class="literal">setUp()</code>, you need
+          a different test case class. Name the class after the difference in
+          the setup.
+        </p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sharing-fixture"><a id="fixtures.sharing-fixture"></a>Sharing Fixture</h2></div></div></div><p>
+      There are few good reasons to share fixtures between tests, but in most
+      cases the need to share a fixture between tests stems from an unresolved
+      design problem.
+    </p><p>
+      A good example of a fixture that makes sense to share across several
+      tests is a database connection: you log into the database once and reuse
+      the database connection instead of creating a new connection for each
+      test. This makes your tests run faster.
+    </p><p>
+      <a id="idp444608" class="indexterm"></a>
+      <a id="idp445184" class="indexterm"></a>
+
+      <a class="xref" href="https://phpunit.de/manual/current/en/fixtures.html#fixtures.sharing-fixture.examples.DatabaseTest.php" title="Example 4.3: Sharing fixture between the tests of a test suite" target="_blank" rel="external">Example 4.3</a>
+      uses the <code class="literal">setUpBeforeClass()</code> and
+      <code class="literal">tearDownAfterClass()</code> template methods to connect to the
+      database before the test case class' first test and to disconnect from the
+      database after the last test of the test case, respectively.
+    </p><div class="example"><a id="fixtures.sharing-fixture.examples.DatabaseTest.php"></a><p class="title"><strong>Example 4.3: Sharing fixture between the tests of a test suite</strong></p><div class="example-contents"><pre class="programlisting hljs php"><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-keyword">use</span> <span class="hljs-title">PHPUnit</span>\<span class="hljs-title">Framework</span>\<span class="hljs-title">TestCase</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseTest</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">TestCase</span>
+</span>{
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">static</span> $dbh;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setUpBeforeClass</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">self</span>::$dbh = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">'sqlite::memory:'</span>);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tearDownAfterClass</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">self</span>::$dbh = <span class="hljs-keyword">null</span>;
+    }
+}
+<span class="hljs-meta">?&gt;</span></pre></div></div><br class="example-break"><br><p>
+      It cannot be emphasized enough that sharing fixtures between tests
+      reduces the value of the tests. The underlying design problem is
+      that objects are not loosely coupled. You will achieve better
+      results solving the underlying design problem and then writing tests
+      using stubs (see <a class="xref" href="https://phpunit.de/manual/current/en/test-doubles.html" title="Chapter 9. Test Doubles" target="_blank" rel="external">Chapter 9</a>), than by creating
+      dependencies between tests at runtime and ignoring the opportunity
+      to improve your design.
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="global-state"><a id="fixtures.global-state"></a>Global State</h2></div></div></div><p>
+      <a class="ulink" href="http://googletesting.blogspot.com/2008/05/tott-using-dependancy-injection-to.html" target="_top">It is hard to test code that uses singletons.</a>
+      The same is true for code that uses global variables. Typically, the code
+      you want to test is coupled strongly with a global variable and you cannot
+      control its creation. An additional problem is the fact that one test's
+      change to a global variable might break another test.
+    </p><p>
+      In PHP, global variables work like this:
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>A global variable <code class="literal">$foo = 'bar';</code> is stored as <code class="literal">$GLOBALS['foo'] = 'bar';</code>.</p></li><li class="listitem"><p>The <code class="literal">$GLOBALS</code> variable is a so-called <span class="emphasis"><em>super-global</em></span> variable.</p></li><li class="listitem"><p>Super-global variables are built-in variables that are always available in all scopes.</p></li><li class="listitem"><p>In the scope of a function or method, you may access the global variable <code class="literal">$foo</code> by either directly accessing <code class="literal">$GLOBALS['foo']</code> or by using <code class="literal">global $foo;</code> to create a local variable with a reference to the global variable.</p></li></ul></div><p>
+      Besides global variables, static attributes of classes are also part of
+      the global state.
+    </p><p>
+      <a id="idp460688" class="indexterm"></a>
+      <a id="idp461264" class="indexterm"></a>
+
+      By default, PHPUnit runs your tests in a way where changes to global
+      and super-global variables (<code class="literal">$GLOBALS</code>,
+      <code class="literal">$_ENV</code>, <code class="literal">$_POST</code>,
+      <code class="literal">$_GET</code>, <code class="literal">$_COOKIE</code>,
+      <code class="literal">$_SERVER</code>, <code class="literal">$_FILES</code>,
+      <code class="literal">$_REQUEST</code>) do not affect other tests. Optionally, this
+      isolation can be extended to static attributes of classes.
+    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+        The backup and restore operations for global variables and static
+        class attributes use <code class="literal">serialize()</code> and
+        <code class="literal">unserialize()</code>.
+      </p><p>
+        Objects of some classes (e.g., <code class="literal">PDO</code>) cannot be
+        serialized and the backup operation will break when such an object is
+        stored e.g. in the <code class="literal">$GLOBALS</code> array.
+      </p></div><p>
+      <a id="idp469360" class="indexterm"></a>
+      <a id="idp470064" class="indexterm"></a>
+
+      The <code class="literal">@backupGlobals</code> annotation that is discussed in
+      <a class="xref" href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.backupGlobals" title="@backupGlobals" target="_blank" rel="external">the section called “@backupGlobals”</a> can be used to
+      control the backup and restore operations for global variables.
+      Alternatively, you can provide a blacklist of global variables that are to
+      be excluded from the backup and restore operations like this
+      </p><pre class="programlisting hljs php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTest</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">TestCase</span>
+</span>{
+    <span class="hljs-keyword">protected</span> $backupGlobalsBlacklist = [<span class="hljs-string">'globalVariable'</span>];
+
+    <span class="hljs-comment">// ...</span>
+}</pre><p>
+    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+        Setting the <code class="literal">$backupGlobalsBlacklist</code> property inside
+        e.g. the <code class="literal">setUp()</code> method has no effect.
+      </p></div><p>
+      <a id="idp474848" class="indexterm"></a>
+      <a id="idp475552" class="indexterm"></a>
+
+      The <code class="literal">@backupStaticAttributes</code> annotation discussed in
+      <a class="xref" href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.backupStaticAttributes" title="@backupStaticAttributes" target="_blank" rel="external">the section called “@backupStaticAttributes”</a>
+      can be used to back up all static property values in all declared classes
+      before each test and restore them afterwards.
+    </p><p>
+      It processes all classes that are declared at the time a test starts, not
+      only the test class itself. It only applies to static class properties,
+      not static variables within functions.
+    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+        The <code class="literal">@backupStaticAttributes</code> operation is executed
+        before a test method, but only if it is enabled. If a static value was
+        changed by a previously executed test that did not have
+        <code class="literal">@backupStaticAttributes</code> enabled, then that value will
+        be backed up and restored — not the originally declared default value.
+        PHP does not record the originally declared default value of any static
+        variable.
+      </p><p>
+        The same applies to static properties of classes that were newly
+        loaded/declared within a test. They cannot be reset to their originally
+        declared default value after the test, since that value is unknown.
+        Whichever value is set will leak into subsequent tests.
+      </p><p>
+        For unit tests, it is recommended to explicitly reset the values of
+        static properties under test in your <code class="literal">setUp()</code> code
+        instead (and ideally also <code class="literal">tearDown()</code>, so as to not
+        affect subsequently executed tests).
+      </p></div><p>
+      You can provide a blacklist of static attributes that are to be excluded
+      from the backup and restore operations:
+
+      </p><pre class="programlisting hljs php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTest</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">TestCase</span>
+</span>{
+    <span class="hljs-keyword">protected</span> $backupStaticAttributesBlacklist = [
+        <span class="hljs-string">'className'</span> =&gt; [<span class="hljs-string">'attributeName'</span>]
+    ];
+
+    <span class="hljs-comment">// ...</span>
+}
+</pre><p>
+    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+        Setting the <code class="literal">$backupStaticAttributesBlacklist</code> property
+        inside e.g. the <code class="literal">setUp()</code> method has no effect.
+      </p></div></div></div>
+     <div class="row">
+      <div class="col-md-1 pull-left prev-nav"><a accesskey="p" href="https://phpunit.de/manual/current/en/textui.html" target="_blank" rel="external">Prev</a></div>
+      <div class="col-md-1 pull-right next-nav"><a accesskey="n" href="https://phpunit.de/manual/current/en/organizing-tests.html" target="_blank" rel="external">Next</a></div>
+     </div>
+<div class="row"><div class="col-md-2"></div><div class="col-md-8"><div class="alert alert-info" style="text-align: center;">Please <a href="https://github.com/sebastianbergmann/phpunit-documentation/issues" target="_blank" rel="external">open a ticket</a> on GitHub to suggest improvements to this page. Thanks!</div></div><div class="col-md-2"></div></div>
+    </div>
+   </div>
+   <hr>
+   <footer>
+    <p><a href="https://phpunit.de/manual/current/en/appendixes.copyright.html" target="_blank" rel="external">Copyright</a> © 2005-2017 <a href="http://sebastian-bergmann.de/" target="_blank" rel="external">Sebastian Bergmann</a>.</p>
+   </footer>
+  </div>
+  <script src="./PHPUnit Manual – Chapter 4. Fixtures_files/jquery.js"></script>
+  <script src="./PHPUnit Manual – Chapter 4. Fixtures_files/bootstrap.min.js"></script>
+  <script src="./PHPUnit Manual – Chapter 4. Fixtures_files/highlight.pack.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() { $('pre.programlisting').each(function(i, e) {hljs.highlightBlock(e)}); });
+  </script>
+ 
+
+</body></html>
+                </div>
+
+                
+
+            </div>
+            
+<section class="comment">
+	<div class="ds-thread" data-title="" data-url="http://www.topjs.org/PHPUnit Manual – Chapter 4. Fixtures.html"></div>
+</section>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer main-bg hidden-sm-down">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <img class="logo" src="/images/logo-white.png" width="165">
+                <p>Simple is beautiful<br/>A full-stack web framework for nodejs</p>
+                <p>
+                    <img src="/images/location.svg" height="22"> 国际电子城总部<br/>
+                    <img src="/images/global.svg" height="22"> http://www.qcoreteam.org
+                </p>
+                <img src="/images/qcoreteam.png">
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 footer-list">
+                <h3>合作伙伴</h3>
+                <ul class="color-gray">
+                    <li>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="13px"
+                             viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                            <g>
+                                <polygon
+                                        points="40.586,12.934 37.023,16.496 50.009,29.481 4.35,29.481 4.35,34.52 50.009,34.52 37.023,47.504 40.586,51.066 59.65,32.001"
+                                        fill="#42c950"/>
+                            </g>
+                        </svg>
+                        <a>独角兽团队</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-bg copyright">
+    <img class="hidden-md-up" src="/images/qcoreteam.png">
+    <p>Copyright ©2017 QCoreTeam. All Rights Reserved.</p>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/common.js"></script>
+
+</body>
