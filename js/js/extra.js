@@ -3,7 +3,7 @@
  */
 var pathname = window.location.pathname;
 var page = pathname.split('/').pop();
-var pageSelector = 'a[href="' + page + '"]';
+var pageSelector = 'a[href="' + page + '"][class*="show-member-names"]';
 if ($(pageSelector).length == 0) {
     pageSelector = 'a[href="TopJs.html"]';
 }
@@ -35,12 +35,12 @@ $('#slideClose').click(function (e) {
     var width = $('.api-container nav').width();
     var left = $('.api-container nav').css('left');
     if (parseInt(left) === 0) {
-        $('.api-container nav').css({
+        $('.api-container nav').animate({
             "left": -(width + 2),
             "opacity": 0
         });
     } else {
-        $('.api-container nav').css({
+        $('.api-container nav').animate({
             "left": 0,
             "opacity": 1
         });
@@ -56,7 +56,7 @@ $('#main *').bind('touchend click', function (e) {
         return;
     }
     var width = $('.api-container nav').width();
-    $('.api-container nav').css({
+    $('.api-container nav').animate({
         "left": -(width + 2),
         "opacity": 0
     });
@@ -70,7 +70,7 @@ $(document).click(function () {
         return;
     }
     var width = $('.api-container nav').width();
-    $('.api-container nav').css({
+    $('.api-container nav').animate({
         "left": -(width + 2),
         "opacity": 0
     });
@@ -80,7 +80,7 @@ $(document).click(function () {
 $(window).resize(function (e) {
     var width = $(window).width();
     if ( width > 768) {
-        $('.api-container nav').css({
+        $('.api-container nav').animate({
             "opacity": 1
         });
     }

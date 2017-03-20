@@ -10,20 +10,20 @@ $('#slide').css({
     "left": -(width + 2)
 });
 
-$('#slideClose').bind('touchend click', function (e) {
+$(document).bind('touchend', function (e) {
     e.stopPropagation();
     var width = $('#slide').width();
     var left = $('#slide').css('left');
     if (parseInt(left) === 0) {
-        $('#slide').css({
+        $('#slide').animate({
             "left": -(width + 2),
             "opacity": 0
-        });
+        }, 500);
     } else {
-        $('#slide').css({
+        $('#slide').animate({
             "left": 0,
             "opacity": 1
-        });
+        }, 500);
     }
 });
 
@@ -42,14 +42,14 @@ $('#slide').click(function (e) {
 maoDian(10);
 $(document).bind('touchend', function (e) {
     var width = $('#slide').width();
-    $('#slide').css({
+    $('#slide').animate({
         "left": -(width + 2),
         "opacity": 0
     });
 });
 $(document).click(function () {
     var width = $('#slide').width();
-    $('#slide').css({
+    $('#slide').animate({
         "left": -(width + 2),
         "opacity": 0
     });
