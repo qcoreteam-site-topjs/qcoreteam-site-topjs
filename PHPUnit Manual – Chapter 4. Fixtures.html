@@ -83,7 +83,7 @@
       <div class="col-md-1 pull-left prev-nav"><a accesskey="p" href="https://phpunit.de/manual/current/en/textui.html" target="_blank" rel="external">Prev</a></div>
       <div class="col-md-1 pull-right next-nav"><a accesskey="n" href="https://phpunit.de/manual/current/en/organizing-tests.html" target="_blank" rel="external">Next</a></div>
      </div>
-<div class="chapter"><div class="titlepage"><div><div><h1 class="title" id="chapternbsp4nbspfixtures"><a id="fixtures"></a>Chapter&nbsp;4.&nbsp;Fixtures</h1></div></div></div><p>
+<div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="fixtures"></a>Chapter&nbsp;4.&nbsp;Fixtures</h1></div></div></div><p>
     <a id="idp313264" class="indexterm"></a>
 
     One of the most time-consuming parts of writing tests is writing the
@@ -265,7 +265,7 @@ Failed asserting that &lt;boolean:false&gt; is true.
 /home/sb/TemplateMethodsTest.php:30
 
 FAILURES!
-Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"><br><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="more-setup-than-teardown"><a id="fixtures.more-setup-than-teardown"></a>More setUp() than tearDown()</h2></div></div></div><p>
+Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"><br><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="fixtures.more-setup-than-teardown"></a>More setUp() than tearDown()</h2></div></div></div><p>
       <code class="literal">setUp()</code> and <code class="literal">tearDown()</code> are nicely
       symmetrical in theory but not in practice. In practice, you only need
       to implement <code class="literal">tearDown()</code> if you have allocated
@@ -276,7 +276,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
       to <code class="literal">unset()</code> the variables pointing to those objects
       in your <code class="literal">tearDown()</code> so they can be garbage collected.
       The garbage collection of test case objects is not predictable.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="variations"><a id="fixtures.variations"></a>Variations</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="fixtures.variations"></a>Variations</h2></div></div></div><p>
       What happens when you have two tests with slightly different setups?
       There are two possibilities:
     </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
@@ -287,7 +287,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
           If you really have a different <code class="literal">setUp()</code>, you need
           a different test case class. Name the class after the difference in
           the setup.
-        </p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sharing-fixture"><a id="fixtures.sharing-fixture"></a>Sharing Fixture</h2></div></div></div><p>
+        </p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="fixtures.sharing-fixture"></a>Sharing Fixture</h2></div></div></div><p>
       There are few good reasons to share fixtures between tests, but in most
       cases the need to share a fixture between tests stems from an unresolved
       design problem.
@@ -330,7 +330,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
       using stubs (see <a class="xref" href="https://phpunit.de/manual/current/en/test-doubles.html" title="Chapter 9. Test Doubles" target="_blank" rel="external">Chapter 9</a>), than by creating
       dependencies between tests at runtime and ignoring the opportunity
       to improve your design.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="global-state"><a id="fixtures.global-state"></a>Global State</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="fixtures.global-state"></a>Global State</h2></div></div></div><p>
       <a class="ulink" href="http://googletesting.blogspot.com/2008/05/tott-using-dependancy-injection-to.html" target="_top">It is hard to test code that uses singletons.</a>
       The same is true for code that uses global variables. Typically, the code
       you want to test is coupled strongly with a global variable and you cannot
@@ -352,7 +352,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
       <code class="literal">$_SERVER</code>, <code class="literal">$_FILES</code>,
       <code class="literal">$_REQUEST</code>) do not affect other tests. Optionally, this
       isolation can be extended to static attributes of classes.
-    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+    </p><div class="alert alert-info"><h3 class="title">Note</h3><p>
         The backup and restore operations for global variables and static
         class attributes use <code class="literal">serialize()</code> and
         <code class="literal">unserialize()</code>.
@@ -375,7 +375,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
 
     <span class="hljs-comment">// ...</span>
 }</pre><p>
-    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+    </p><div class="alert alert-info"><h3 class="title">Note</h3><p>
         Setting the <code class="literal">$backupGlobalsBlacklist</code> property inside
         e.g. the <code class="literal">setUp()</code> method has no effect.
       </p></div><p>
@@ -390,7 +390,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
       It processes all classes that are declared at the time a test starts, not
       only the test class itself. It only applies to static class properties,
       not static variables within functions.
-    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+    </p><div class="alert alert-info"><h3 class="title">Note</h3><p>
         The <code class="literal">@backupStaticAttributes</code> operation is executed
         before a test method, but only if it is enabled. If a static value was
         changed by a previously executed test that did not have
@@ -421,7 +421,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
     <span class="hljs-comment">// ...</span>
 }
 </pre><p>
-    </p><div class="alert alert-info"><h3 class="title" id="note">Note</h3><p>
+    </p><div class="alert alert-info"><h3 class="title">Note</h3><p>
         Setting the <code class="literal">$backupStaticAttributesBlacklist</code> property
         inside e.g. the <code class="literal">setUp()</code> method has no effect.
       </p></div></div></div>
@@ -467,7 +467,7 @@ Tests: 2, Assertions: 2, Failures: 1.</pre></div></div><br class="example-break"
                 <img class="logo" src="/images/logo-white.png" width="165">
                 <p>Simple is beautiful<br/>A full-stack web framework for nodejs</p>
                 <p>
-                    <img src="/images/location.svg" height="22"> 国际电子城总部<br/>
+                    <img src="/images/location.svg" height="22"> 北京市朝阳区酒仙桥路国际电子城总部<br/>
                     <img src="/images/global.svg" height="22"> http://www.qcoreteam.org
                 </p>
                 <img src="/images/qcoreteam.png">
