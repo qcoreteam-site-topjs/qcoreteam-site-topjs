@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TopJs - A full-stack web framework for nodejs</title>
-    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/highlight.css">
     <link rel="stylesheet" href="/css/news-content.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-light.min.css">
-
+    <link rel="stylesheet" href="/css/common.css">
     <link rel="icon" href="/topjsico.png" type="image/png"/>
 </head>
 <body>
@@ -39,12 +40,22 @@
                 </div>
                 <hr/>
                 <div class="detail">
-                    <h3 id="背景说明"><a href="#背景说明" class="headerlink" title="背景说明"></a>背景说明</h3><p>当前Javascript的ES6标准已经发布，但是还是缺失了一些面向对象的特性，可能以后会陆续的进行添加</p>
-<pre><code class="javascript">
-let name = &quot;xiuxiux&quot;;
-function xiuxiux()
-{}
+                    <p>当前Javascript的ES6标准已经发布，但是还是缺失了一些面向对象的特性，可能以后会陆续的进行添加，但是为了更好的实现TopJs框架，我们添加了一些跟Javascript<br>类相关的函数。等到相关标准原生支持的时候，我们会相应移除。现在我们简单的看看我们添加的函数，详细文档请查看编程手册。</p>
+<p>在TopJs框架里面我们调用函数<code>TopJs.namespace(&quot;some name space&quot;&quot;)</code>创建一个名称空间, 例如：</p>
+<pre><code class="javascript">let ns = TopJs.namespace(&quot;App.kernel&quot;); // create a namespace object
+console.log(ns.name); // App.kernel
 </code></pre>
+<p>TopJs框架本身的名称空间就是通过这个函数进行组织。<br>当我们需要使用一个类的时候，比如使用TopJs的<code>TopJs.stdlib.MaxHeap</code>类，您只要在您的代码开头写上</p>
+<pre><code>let MaxHeap = TopJs.requre(&quot;TopJs.stdlib.MaxHeap&quot;);
+let heap = new TopJs.stdlib.MaxHeap();
+let heap1 = new MaxHeap();
+</code></pre><p>我们这样调用的前提是咱们的代码严格按照名称空间在文件系统进行创建，拿咱们的<code>TopJs.stdlib.MaxHeap</code>类为例子，这个类在文件系统的路径为：<br><code>TopJsRootDir/stdlib/MaxHeap.js</code><br>其他的特性有：</p>
+<ul>
+<li>实现接口，已经判断一个类是否实现指定的接口</li>
+<li>将指定的类注册到指定的名称空间</li>
+<li>使用字符串创建指定类的实例</li>
+</ul>
+<p>咱们就简单的介绍到这里，详情可以进一步阅读编程手册</p>
 
                 </div>
 
