@@ -3,7 +3,7 @@
  */
 
 $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
-hljs.initHighlightingOnLoad();
+
 
 var width = $('#slide').width();
 $('#slide').css({
