@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TopJs - A full-stack web framework for nodejs</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/highlight.css">
+    
     <link rel="stylesheet" href="/css/docs.css">
 <link rel="stylesheet" href="/css/BootSideMenu.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-light.min.css">
-    <link rel="stylesheet" href="/css/common.css">
+
     <link rel="icon" href="/topjsico.png" type="image/png"/>
 </head>
 <body>
@@ -144,14 +143,15 @@ $(&#39;#slideClose&#39;).click(function (e) {
 <script src="/js/tether.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/common.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
 <script src="/js/BootSideMenu.js"></script>
 <script src="/js/maodian.js"></script>
 <script src="/js/docs.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
 
 <script type="text/javascript">
     hljs && hljs.initHighlightingOnLoad();
     var duoshuoQuery = {short_name:"topjs"};
+    $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
     (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
