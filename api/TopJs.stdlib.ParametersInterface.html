@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ServiceLocatorInterface - A full-stack web framework for nodejs</title>
+    <title>ParametersInterface - A full-stack web framework for nodejs</title>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,7 +51,7 @@
     </nav>
     <div id="main">
         
-        <h1 class="page-title">ServiceLocatorInterface</h1>
+        <h1 class="page-title">ParametersInterface</h1>
         
 
         
@@ -64,9 +64,9 @@
 <header>
     
         <h2>
-            <span class="ancestors"><a href="TopJs.html">TopJs</a><a href="TopJs.servicemanager.html">.servicemanager</a>.</span>
+            <span class="ancestors"><a href="TopJs.html">TopJs</a><a href="TopJs.stdlib.html">.stdlib</a>.</span>
         
-        ServiceLocatorInterface
+        ParametersInterface
         </h2>
         
     
@@ -79,7 +79,7 @@
 
     
 
-    <h4 class="name method-header" id="ServiceLocatorInterface" method-name="ServiceLocatorInterface"><span class="type-signature"></span>new TopJs.servicemanager.ServiceLocatorInterface<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name method-header" id="ParametersInterface" method-name="ParametersInterface"><span class="type-signature"></span>new TopJs.stdlib.ParametersInterface<span class="signature">(values)</span><span class="type-signature"></span></h4>
 
     
 
@@ -91,7 +91,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="servicemanager_ServiceLocatorInterface.js.html">servicemanager/ServiceLocatorInterface.js</a>, <a href="servicemanager_ServiceLocatorInterface.js.html#line16">line 16</a>
+        <a href="stdlib_ParametersInterface.js.html">stdlib/ParametersInterface.js</a>, <a href="stdlib_ParametersInterface.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -130,6 +130,9 @@
 
 
 
+<div class="description">
+    <p>Constructor</p>
+</div>
 
 
 
@@ -141,11 +144,64 @@
 
 
 
+    <h5>Parameters:</h5>
+    
 
-<h5>Requires:</h5>
-<ul>
-    <li>module:TopJs.psr.ContainerInterface</li>
-</ul>
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>null</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
 
 
 
@@ -165,12 +221,6 @@
     
 
     
-        <h3 class="subsection-title">Requires</h3>
-
-        <ul>
-            <li>module:TopJs.psr.ContainerInterface</li>
-        </ul>
-    
 
     
 
@@ -180,6 +230,843 @@
 
     
 
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="fromArray" method-name="fromArray"><span class="type-signature"></span>fromArray<span class="signature">(values)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_ParametersInterface.js.html">stdlib/ParametersInterface.js</a>, <a href="stdlib_ParametersInterface.js.html#line33">line 33</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>From</p>
+<p>Allow deserialization from standard</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>mixed</p>
+</div>
+
+
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="fromString" method-name="fromString"><span class="type-signature"></span>fromString<span class="signature">(string)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_ParametersInterface.js.html">stdlib/ParametersInterface.js</a>, <a href="stdlib_ParametersInterface.js.html#line45">line 45</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>From string</p>
+<p>Allow deserialization from raw body{} e.g., for PUT requests</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>string</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>mixed</p>
+</div>
+
+
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="get" method-name="get"><span class="type-signature"></span>get<span class="signature">(name, defaultValue)</span><span class="type-signature"> &rarr; {mixed}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_ParametersInterface.js.html">stdlib/ParametersInterface.js</a>, <a href="stdlib_ParametersInterface.js.html#line78">line 78</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Get</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>defaultValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>null</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">mixed</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="set" method-name="set"><span class="type-signature"></span>set<span class="signature">(name, value)</span><span class="type-signature"> &rarr; {<a href="TopJs.stdlib.ParametersInterface.html">TopJs.stdlib.ParametersInterface</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_ParametersInterface.js.html">stdlib/ParametersInterface.js</a>, <a href="stdlib_ParametersInterface.js.html#line89">line 89</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Set</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="TopJs.stdlib.ParametersInterface.html">TopJs.stdlib.ParametersInterface</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="toArray" method-name="toArray"><span class="type-signature"></span>toArray<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_ParametersInterface.js.html">stdlib/ParametersInterface.js</a>, <a href="stdlib_ParametersInterface.js.html#line56">line 56</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>To</p>
+<p>Allow serialization back to standard</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>mixed</p>
+</div>
+
+
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="toString" method-name="toString"><span class="type-signature"></span>toString<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_ParametersInterface.js.html">stdlib/ParametersInterface.js</a>, <a href="stdlib_ParametersInterface.js.html#line67">line 67</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>To string</p>
+<p>Allow serialization to query format{} e.g., for PUT or POST requests</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>mixed</p>
+</div>
+
+
+
+    
+
+
+        
     
 
     

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>code/NameInformation.js - A full-stack web framework for nodejs</title>
+    <title>DispatchableInterface - A full-stack web framework for nodejs</title>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,137 +51,132 @@
     </nav>
     <div id="main">
         
-        <h1 class="page-title">code/NameInformation.js</h1>
+        <h1 class="page-title">DispatchableInterface</h1>
         
 
         
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="TopJs.html">TopJs</a><a href="TopJs.stdlib.html">.stdlib</a>.</span>
+        
+        DispatchableInterface
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name method-header" id="DispatchableInterface" method-name="DispatchableInterface"><span class="type-signature"></span>new TopJs.stdlib.DispatchableInterface<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_DispatchableInterface.js.html">stdlib/DispatchableInterface.js</a>, <a href="stdlib_DispatchableInterface.js.html#line14">line 14</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>"use strict";
-/*
- * TopJs Framework (http://www.topjs.org/)
- *
- * @link      http://github.com/qcoreteam/topjs for the canonical source repository
- * @copyright Copyright (c) 2016-2017 QCoreTeam (http://www.qcoreteam.org)
- * @license   http://www.topjs.org/license/new-bsd New BSD License
- */
-TopJs.namespace("TopJs.code");
+    </div>
 
-/**
- * @class TopJs.code.NameInformation
- * @constructor
- */
-class NameInformation {
-    constructor(namespace = null, uses = [])
-    {
-        /**
-         * @property {String} namespace
-         */
-        this.namespace = null;
+    
 
-        /**
-         * @property {Map} uses
-         */
-        this.uses = new Map();
-        
-        if (namespace) {
-            this.setNamespace(namespace);
-        }
-        if (uses) {
-            this.setUses(uses);
-        }
-    }
+    
 
-    setNamespace(namespace)
-    {
-        this.namespace = namespace;
-        return this;
-    }
+    
 
-    /**
-     * @return {String}
-     */
-    getNamespace()
-    {
-        return this.namespace;
-    }
+     
 
-    /**
-     * @return {Boolean}
-     */
-    hasNamespace()
-    {
-        return (this.namespace !== null);
-    }
+    
 
-    /**
-     * @param {Object|Array} uses
-     * @return {TopJs.code.NameInformation}
-     */
-    setUses(uses)
-    {
-        this.uses.clear();
-        this.addUses(uses);
-        return this;
-    }
+    
 
-    /**
-     * @param {Object|Array} uses
-     * @return {TopJs.code.NameInformation}
-     */
-    addUses(uses)
-    {
-        if (TopJs.isArray(uses)) {
-            for (let i = 0; i &lt; uses.length; i++) {
-                this.addUse(uses[i]);
-            }
-        } else if (TopJs.isSimpleObject(uses)) {
-            for (let [use, as] of Object.entries(uses)) {
-                this.addUse(use, as);
-            }
-        }
-        return this;
-    }
+    
 
-    /**
-     * @param {String} use the fullclass name
-     * @param {String} as the class alias name
-     * @return {TopJs.code.NameInformation}
-     */
-    addUse(use, as = null)
-    {
-        if (TopJs.isString(as)) {
-            as = as.replace(/\./g, '');
-        } else {
-            as = use;
-        }
-        this.uses.set(use, as);
-        return this;
-    }
+    
 
-    /**
-     * @return {Object}
-     */
-    getUses()
-    {
-        let uses = {};
-        this.uses.forEach(function (as, use)
-        {
-            uses[use] = as;
-        });
-        return uses;
-    }
-}
+    
+</article>
 
-TopJs.registerClass("TopJs.code.NameInfomation", NameInformation);
-module.exports = NameInformation;
-</code></pre>
-        </article>
-    </section>
+</section>
 
 
 

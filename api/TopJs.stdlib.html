@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>code/NameInformation.js - A full-stack web framework for nodejs</title>
+    <title>stdlib - A full-stack web framework for nodejs</title>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,137 +51,150 @@
     </nav>
     <div id="main">
         
-        <h1 class="page-title">code/NameInformation.js</h1>
+        <h1 class="page-title">stdlib</h1>
         
 
         
 
 
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="TopJs.html">TopJs</a>.</span>
+        
+        stdlib
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+<dl class="details">
 
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>"use strict";
-/*
- * TopJs Framework (http://www.topjs.org/)
- *
- * @link      http://github.com/qcoreteam/topjs for the canonical source repository
- * @copyright Copyright (c) 2016-2017 QCoreTeam (http://www.qcoreteam.org)
- * @license   http://www.topjs.org/license/new-bsd New BSD License
- */
-TopJs.namespace("TopJs.code");
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Index.js.html">Index.js</a>, <a href="Index.js.html#line61">line 61</a>
+    </li></ul></dd>
+    
 
-/**
- * @class TopJs.code.NameInformation
- * @constructor
- */
-class NameInformation {
-    constructor(namespace = null, uses = [])
-    {
-        /**
-         * @property {String} namespace
-         */
-        this.namespace = null;
+    
 
-        /**
-         * @property {Map} uses
-         */
-        this.uses = new Map();
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
         
-        if (namespace) {
-            this.setNamespace(namespace);
-        }
-        if (uses) {
-            this.setUses(uses);
-        }
-    }
 
-    setNamespace(namespace)
-    {
-        this.namespace = namespace;
-        return this;
-    }
+        
+    
+    </div>
 
-    /**
-     * @return {String}
-     */
-    getNamespace()
-    {
-        return this.namespace;
-    }
+    
 
-    /**
-     * @return {Boolean}
-     */
-    hasNamespace()
-    {
-        return (this.namespace !== null);
-    }
+    
 
-    /**
-     * @param {Object|Array} uses
-     * @return {TopJs.code.NameInformation}
-     */
-    setUses(uses)
-    {
-        this.uses.clear();
-        this.addUses(uses);
-        return this;
-    }
+    
+        <h3 class="subsection-title">Classes</h3>
 
-    /**
-     * @param {Object|Array} uses
-     * @return {TopJs.code.NameInformation}
-     */
-    addUses(uses)
-    {
-        if (TopJs.isArray(uses)) {
-            for (let i = 0; i &lt; uses.length; i++) {
-                this.addUse(uses[i]);
-            }
-        } else if (TopJs.isSimpleObject(uses)) {
-            for (let [use, as] of Object.entries(uses)) {
-                this.addUse(use, as);
-            }
-        }
-        return this;
-    }
+        <dl>
+            <dt><a href="TopJs.stdlib.AbstractOptions.html">AbstractOptions</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.DispatchableInterface.html">DispatchableInterface</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.DoubleLinkedList.html">DoubleLinkedList</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.FastPriorityQueue.html">FastPriorityQueue</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.Heap.html">Heap</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.MaxHeap.html">MaxHeap</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.Message.html">Message</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.MessageInterface.html">MessageInterface</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.MinHeap.html">MinHeap</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.Parameters.html">Parameters</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.ParametersInterface.html">ParametersInterface</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.PriorityList.html">PriorityList</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.PriorityQueue.html">PriorityQueue</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.Queue.html">Queue</a></dt>
+            <dd></dd>
+        
+            <dt><a href="TopJs.stdlib.Stack.html">Stack</a></dt>
+            <dd></dd>
+        </dl>
+    
 
-    /**
-     * @param {String} use the fullclass name
-     * @param {String} as the class alias name
-     * @return {TopJs.code.NameInformation}
-     */
-    addUse(use, as = null)
-    {
-        if (TopJs.isString(as)) {
-            as = as.replace(/\./g, '');
-        } else {
-            as = use;
-        }
-        this.uses.set(use, as);
-        return this;
-    }
+     
 
-    /**
-     * @return {Object}
-     */
-    getUses()
-    {
-        let uses = {};
-        this.uses.forEach(function (as, use)
-        {
-            uses[use] = as;
-        });
-        return uses;
-    }
-}
+    
 
-TopJs.registerClass("TopJs.code.NameInfomation", NameInformation);
-module.exports = NameInformation;
-</code></pre>
-        </article>
-    </section>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

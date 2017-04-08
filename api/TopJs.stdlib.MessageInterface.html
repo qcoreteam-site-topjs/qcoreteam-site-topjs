@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>code/NameInformation.js - A full-stack web framework for nodejs</title>
+    <title>MessageInterface - A full-stack web framework for nodejs</title>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,137 +51,728 @@
     </nav>
     <div id="main">
         
-        <h1 class="page-title">code/NameInformation.js</h1>
+        <h1 class="page-title">MessageInterface</h1>
         
 
         
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="TopJs.html">TopJs</a><a href="TopJs.stdlib.html">.stdlib</a>.</span>
+        
+        MessageInterface
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name method-header" id="MessageInterface" method-name="MessageInterface"><span class="type-signature"></span>new TopJs.stdlib.MessageInterface<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_MessageInterface.js.html">stdlib/MessageInterface.js</a>, <a href="stdlib_MessageInterface.js.html#line14">line 14</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>"use strict";
-/*
- * TopJs Framework (http://www.topjs.org/)
- *
- * @link      http://github.com/qcoreteam/topjs for the canonical source repository
- * @copyright Copyright (c) 2016-2017 QCoreTeam (http://www.qcoreteam.org)
- * @license   http://www.topjs.org/license/new-bsd New BSD License
- */
-TopJs.namespace("TopJs.code");
+    </div>
 
-/**
- * @class TopJs.code.NameInformation
- * @constructor
- */
-class NameInformation {
-    constructor(namespace = null, uses = [])
-    {
-        /**
-         * @property {String} namespace
-         */
-        this.namespace = null;
+    
 
-        /**
-         * @property {Map} uses
-         */
-        this.uses = new Map();
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
         
-        if (namespace) {
-            this.setNamespace(namespace);
-        }
-        if (uses) {
-            this.setUses(uses);
-        }
-    }
+            
 
-    setNamespace(namespace)
-    {
-        this.namespace = namespace;
-        return this;
-    }
+    
 
-    /**
-     * @return {String}
-     */
-    getNamespace()
-    {
-        return this.namespace;
-    }
+    <h4 class="name method-header" id="getContent" method-name="getContent"><span class="type-signature"></span>getContent<span class="signature">()</span><span class="type-signature"> &rarr; {mixed}</span></h4>
 
-    /**
-     * @return {Boolean}
-     */
-    hasNamespace()
-    {
-        return (this.namespace !== null);
-    }
+    
 
-    /**
-     * @param {Object|Array} uses
-     * @return {TopJs.code.NameInformation}
-     */
-    setUses(uses)
-    {
-        this.uses.clear();
-        this.addUses(uses);
-        return this;
-    }
 
-    /**
-     * @param {Object|Array} uses
-     * @return {TopJs.code.NameInformation}
-     */
-    addUses(uses)
-    {
-        if (TopJs.isArray(uses)) {
-            for (let i = 0; i &lt; uses.length; i++) {
-                this.addUse(uses[i]);
-            }
-        } else if (TopJs.isSimpleObject(uses)) {
-            for (let [use, as] of Object.entries(uses)) {
-                this.addUse(use, as);
-            }
-        }
-        return this;
-    }
 
-    /**
-     * @param {String} use the fullclass name
-     * @param {String} as the class alias name
-     * @return {TopJs.code.NameInformation}
-     */
-    addUse(use, as = null)
-    {
-        if (TopJs.isString(as)) {
-            as = as.replace(/\./g, '');
-        } else {
-            as = use;
-        }
-        this.uses.set(use, as);
-        return this;
-    }
 
-    /**
-     * @return {Object}
-     */
-    getUses()
-    {
-        let uses = {};
-        this.uses.forEach(function (as, use)
-        {
-            uses[use] = as;
-        });
-        return uses;
-    }
-}
+<dl class="details">
 
-TopJs.registerClass("TopJs.code.NameInfomation", NameInformation);
-module.exports = NameInformation;
-</code></pre>
-        </article>
-    </section>
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_MessageInterface.js.html">stdlib/MessageInterface.js</a>, <a href="stdlib_MessageInterface.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Get content</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">mixed</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="getMetadata" method-name="getMetadata"><span class="type-signature"></span>getMetadata<span class="signature">(key)</span><span class="type-signature"> &rarr; {mixed}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_MessageInterface.js.html">stdlib/MessageInterface.js</a>, <a href="stdlib_MessageInterface.js.html#line31">line 31</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Get metadata</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Number</span>
+|
+
+<span class="param-type">Null</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>null</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">mixed</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="setContent" method-name="setContent"><span class="type-signature"></span>setContent<span class="signature">(content)</span><span class="type-signature"> &rarr; {mixed}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_MessageInterface.js.html">stdlib/MessageInterface.js</a>, <a href="stdlib_MessageInterface.js.html#line40">line 40</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Set content</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">mixed</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name method-header" id="setMetadata" method-name="setMetadata"><span class="type-signature"></span>setMetadata<span class="signature">(spec, value)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stdlib_MessageInterface.js.html">stdlib/MessageInterface.js</a>, <a href="stdlib_MessageInterface.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Set metadata</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>spec</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Number</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>null</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
